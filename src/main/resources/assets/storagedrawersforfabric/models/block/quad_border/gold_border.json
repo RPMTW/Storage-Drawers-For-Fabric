@@ -1,0 +1,6 @@
+{
+  "parent": "storagedrawersforfabric:block/quad_border/drawer_border",
+  "textures": {
+    "border": "block/gold_block"
+  }
+}

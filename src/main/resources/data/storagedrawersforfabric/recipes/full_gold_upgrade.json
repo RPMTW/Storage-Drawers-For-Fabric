@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IDI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "storagedrawersforfabric:iron_upgrade"
+    }
+  },
+  "result": {
+    "item": "storagedrawersforfabric:full_gold_upgrade",
+    "count": 1
+  }
+}

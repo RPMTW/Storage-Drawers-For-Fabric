@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "storagedrawersforfabric:oak_drawer",
+    "storagedrawersforfabric:dark_oak_drawer",
+    "storagedrawersforfabric:spruce_drawer",
+    "storagedrawersforfabric:jungle_drawer",
+    "storagedrawersforfabric:acacia_drawer",
+    "storagedrawersforfabric:birch_drawer",
+    "storagedrawersforfabric:half_oak_drawer",
+    "storagedrawersforfabric:half_dark_oak_drawer",
+    "storagedrawersforfabric:half_spruce_drawer",
+    "storagedrawersforfabric:half_jungle_drawer",
+    "storagedrawersforfabric:half_acacia_drawer",
+    "storagedrawersforfabric:half_birch_drawer"
+  ]
+}

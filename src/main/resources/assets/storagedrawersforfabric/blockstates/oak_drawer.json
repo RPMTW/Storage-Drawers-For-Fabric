@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "storagedrawersforfabric:block/oak_drawer"
+    },
+    "facing=east": {
+      "model": "storagedrawersforfabric:block/oak_drawer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "storagedrawersforfabric:block/oak_drawer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "storagedrawersforfabric:block/oak_drawer",
+      "y": 270
+    }
+  }
+}

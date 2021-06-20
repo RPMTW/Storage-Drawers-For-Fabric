@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "storagedrawersforfabric:block/spruce_drawer"
+    },
+    "facing=east": {
+      "model": "storagedrawersforfabric:block/spruce_drawer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "storagedrawersforfabric:block/spruce_drawer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "storagedrawersforfabric:block/spruce_drawer",
+      "y": 270
+    }
+  }
+}

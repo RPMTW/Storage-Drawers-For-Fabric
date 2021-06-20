@@ -1,6 +1,0 @@
-{
-  "parent": "simpledrawers:attributes/attribute_base",
-  "textures": {
-    "texture": "simpledrawers:attributes/lock"
-  }
-}

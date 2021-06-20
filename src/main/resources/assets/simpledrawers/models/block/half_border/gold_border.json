@@ -1,6 +1,0 @@
-{
-  "parent": "simpledrawers:block/half_border/drawer_border",
-  "textures": {
-    "border": "block/gold_block"
-  }
-}

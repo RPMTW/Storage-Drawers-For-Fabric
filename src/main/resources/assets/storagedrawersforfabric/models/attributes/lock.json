@@ -1,0 +1,6 @@
+{
+  "parent": "storagedrawersforfabric:attributes/attribute_base",
+  "textures": {
+    "texture": "storagedrawersforfabric:attributes/lock"
+  }
+}

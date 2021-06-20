@@ -1,25 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "simpledrawers",
+  "id": "storagedrawersforfabric",
   "version": "${version}",
-  "name": "Simple Drawers",
+  "name": "Storage Drawers For Fabric",
   "description": "",
   "authors": [
     "benfah"
   ],
   "license": "MIT",
-  "icon": "assets/simpledrawers/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.benfah.simpledrawers.SimpleDrawersMod"
+      "ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersMod"
     ],
     "client": [
-      "me.benfah.simpledrawers.SimpleDrawersModClient"
+      "ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersModClient"
     ]
   },
   "mixins": [
-    "simpledrawers.mixins.json"
+    "storagedrawersforfabric.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.4",
@@ -28,8 +27,8 @@
   },
   "custom": {
     "waila:plugins": {
-      "id": "simpledrawers:hwyla_plugin",
-      "initializer": "me.benfah.simpledrawers.plugin.hwyla.HwylaPlugin"
+      "id": "storagedrawersforfabric:hwyla_plugin",
+      "initializer": "ga.rpmtw.www.storagedrawersforfabric.plugin.hwyla.HwylaPlugin"
     }
   },
   "suggests": {

@@ -1,6 +1,0 @@
-{
-  "parent": "simpledrawers:block/quad_border/drawer_border",
-  "textures": {
-    "border": "block/emerald_block"
-  }
-}

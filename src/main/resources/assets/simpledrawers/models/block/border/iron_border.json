@@ -1,6 +1,0 @@
-{
-  "parent": "simpledrawers:block/border/drawer_border",
-  "textures": {
-    "border": "block/iron_block"
-  }
-}

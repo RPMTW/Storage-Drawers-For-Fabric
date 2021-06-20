@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "storagedrawersforfabric:block/controller_top",
+    "front": "storagedrawersforfabric:block/controller_front",
+    "side": "storagedrawersforfabric:block/controller_side"
+  }
+}

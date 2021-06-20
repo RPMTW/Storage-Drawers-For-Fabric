@@ -1,0 +1,7 @@
+{
+  "parent": "storagedrawersforfabric:block/drawer_base",
+  "textures": {
+    "particle": "block/stripped_dark_oak_log",
+    "base": "block/stripped_dark_oak_log"
+  }
+}

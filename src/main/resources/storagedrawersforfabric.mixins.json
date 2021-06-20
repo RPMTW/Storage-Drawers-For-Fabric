@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ga.rpmtw.www.storagedrawersforfabric.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "client.ItemRendererMixin",
+    "client.ModelLoaderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+  ]
+}
