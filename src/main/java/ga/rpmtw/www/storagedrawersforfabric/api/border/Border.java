@@ -1,6 +1,6 @@
 package ga.rpmtw.www.storagedrawersforfabric.api.border;
 
-import ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersMod;
+import ga.rpmtw.www.storagedrawersforfabric.StorageDrawersMod;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.DrawerType;
 import net.minecraft.util.Identifier;
 
@@ -64,19 +64,19 @@ public class Border implements Comparable<Border>
         return 1;
     }
 
-    public static Border OAK_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "oak_border", BorderType.BASIC);
-    public static Border BIRCH_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "birch_border", BorderType.BASIC);
-    public static Border DARK_OAK_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "dark_oak_border", BorderType.BASIC);
-    public static Border SPRUCE_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "spruce_border", BorderType.BASIC);
-    public static Border ACACIA_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "acacia_border", BorderType.BASIC);
-    public static Border JUNGLE_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "jungle_border", BorderType.BASIC);
-    public static Border CRIMSON_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "crimson_border", BorderType.BASIC);
-    public static Border WARPED_BORDER = new Border(1, SimpleDrawersMod.MOD_ID, "warped_border", BorderType.BASIC);
+    public static Border OAK_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "oak_border", BorderType.BASIC);
+    public static Border BIRCH_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "birch_border", BorderType.BASIC);
+    public static Border DARK_OAK_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "dark_oak_border", BorderType.BASIC);
+    public static Border SPRUCE_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "spruce_border", BorderType.BASIC);
+    public static Border ACACIA_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "acacia_border", BorderType.BASIC);
+    public static Border JUNGLE_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "jungle_border", BorderType.BASIC);
+    public static Border CRIMSON_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "crimson_border", BorderType.BASIC);
+    public static Border WARPED_BORDER = new Border(1, StorageDrawersMod.MOD_ID, "warped_border", BorderType.BASIC);
 
-    public static Border IRON_BORDER = new Border(2, SimpleDrawersMod.MOD_ID, "iron_border", BorderType.UPGRADED);
-    public static Border GOLD_BORDER = new Border(4, SimpleDrawersMod.MOD_ID, "gold_border", BorderType.UPGRADED);
-    public static Border DIAMOND_BORDER = new Border(8, SimpleDrawersMod.MOD_ID, "diamond_border", BorderType.UPGRADED);
-    public static Border EMERALD_BORDER = new Border(16, SimpleDrawersMod.MOD_ID, "emerald_border",
+    public static Border IRON_BORDER = new Border(2, StorageDrawersMod.MOD_ID, "iron_border", BorderType.UPGRADED);
+    public static Border GOLD_BORDER = new Border(4, StorageDrawersMod.MOD_ID, "gold_border", BorderType.UPGRADED);
+    public static Border DIAMOND_BORDER = new Border(8, StorageDrawersMod.MOD_ID, "diamond_border", BorderType.UPGRADED);
+    public static Border EMERALD_BORDER = new Border(16, StorageDrawersMod.MOD_ID, "emerald_border",
             BorderType.UPGRADED);
 
     public static void init()

@@ -1,7 +1,7 @@
 package ga.rpmtw.www.storagedrawersforfabric.init;
 
 import com.mojang.datafixers.util.Either;
-import ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersMod;
+import ga.rpmtw.www.storagedrawersforfabric.StorageDrawersMod;
 import ga.rpmtw.www.storagedrawersforfabric.api.border.Border;
 import ga.rpmtw.www.storagedrawersforfabric.item.*;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -121,7 +121,7 @@ public class SDItems
 
     private static void initItemGroup()
     {
-        SD_GROUP = FabricItemGroupBuilder.build(new Identifier(SimpleDrawersMod.MOD_ID, "simple_drawers"),
+        SD_GROUP = FabricItemGroupBuilder.build(new Identifier(StorageDrawersMod.MOD_ID, "simple_drawers"),
                 () -> new ItemStack(OAK_DRAWER));
     }
 
@@ -134,7 +134,7 @@ public class SDItems
 
     public static <T extends Item> T register(String name, T item)
     {
-        Registry.register(Registry.ITEM, new Identifier(SimpleDrawersMod.MOD_ID, name), item);
+        Registry.register(Registry.ITEM, new Identifier(StorageDrawersMod.MOD_ID, name), item);
         return item;
     }
 

@@ -1,6 +1,6 @@
 package ga.rpmtw.www.storagedrawersforfabric.init;
 
-import ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersMod;
+import ga.rpmtw.www.storagedrawersforfabric.StorageDrawersMod;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity.BlockEntityAbstractDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityBasicDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityHalfDrawer;
@@ -15,9 +15,9 @@ import net.minecraft.util.math.BlockPos;
 public class SDContainers
 {
 
-    public static Identifier BASIC_DRAWER_CONTAINER = new Identifier(SimpleDrawersMod.MOD_ID, "basic_drawer");
-    public static Identifier DOUBLE_DRAWER_CONTAINER = new Identifier(SimpleDrawersMod.MOD_ID, "double_drawer");
-    public static Identifier QUAD_DRAWER_CONTAINER = new Identifier(SimpleDrawersMod.MOD_ID, "quad_drawer");
+    public static Identifier BASIC_DRAWER_CONTAINER = new Identifier(StorageDrawersMod.MOD_ID, "basic_drawer");
+    public static Identifier DOUBLE_DRAWER_CONTAINER = new Identifier(StorageDrawersMod.MOD_ID, "double_drawer");
+    public static Identifier QUAD_DRAWER_CONTAINER = new Identifier(StorageDrawersMod.MOD_ID, "quad_drawer");
 
     public SDContainers()
     {

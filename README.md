@@ -1,4 +1,4 @@
-# SimpleDrawers
+# storagedrawersforfabric
 This mod adds drawers to the game that are capable of storing 2048 items of one type. These drawers are available in all wood types.
 
 #### Special Thanks to:

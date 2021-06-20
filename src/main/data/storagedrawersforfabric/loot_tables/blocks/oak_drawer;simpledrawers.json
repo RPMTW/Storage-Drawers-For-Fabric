@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "storagedrawersforfabric:oak_drawer;simpledrawers"
+          "name": "storagedrawersforfabric:oak_drawer;storagedrawersforfabric"
         }
       ],
       "conditions": [

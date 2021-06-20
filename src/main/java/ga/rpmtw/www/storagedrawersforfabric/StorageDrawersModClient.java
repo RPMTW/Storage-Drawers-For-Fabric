@@ -16,7 +16,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 
-public class SimpleDrawersModClient implements ClientModInitializer
+public class StorageDrawersModClient implements ClientModInitializer
 {
 
     @Override

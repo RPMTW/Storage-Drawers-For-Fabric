@@ -11,10 +11,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersMod"
+      "ga.rpmtw.www.storagedrawersforfabric.StorageDrawersMod"
     ],
     "client": [
-      "ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersModClient"
+      "ga.rpmtw.www.storagedrawersforfabric.StorageDrawersModClient"
     ]
   },
   "mixins": [

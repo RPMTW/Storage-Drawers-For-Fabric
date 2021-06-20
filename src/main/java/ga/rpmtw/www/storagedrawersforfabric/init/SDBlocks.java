@@ -1,6 +1,6 @@
 package ga.rpmtw.www.storagedrawersforfabric.init;
 
-import ga.rpmtw.www.storagedrawersforfabric.SimpleDrawersMod;
+import ga.rpmtw.www.storagedrawersforfabric.StorageDrawersMod;
 import ga.rpmtw.www.storagedrawersforfabric.api.border.Border;
 import ga.rpmtw.www.storagedrawersforfabric.block.BlockDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.block.BlockDrawerController;
@@ -137,7 +137,7 @@ public class SDBlocks
 
     private static void registerBlock(String name, Block block)
     {
-        Registry.register(Registry.BLOCK, new Identifier(SimpleDrawersMod.MOD_ID, name), block);
+        Registry.register(Registry.BLOCK, new Identifier(StorageDrawersMod.MOD_ID, name), block);
     }
 
     public static List<Block> getBlocks()

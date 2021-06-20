@@ -4,7 +4,7 @@ import ga.rpmtw.www.storagedrawersforfabric.api.border.Border;
 import ga.rpmtw.www.storagedrawersforfabric.init.*;
 import net.fabricmc.api.ModInitializer;
 
-public class SimpleDrawersMod implements ModInitializer
+public class StorageDrawersMod implements ModInitializer
 {
 
     public static final String MOD_ID = "storagedrawersforfabric";
