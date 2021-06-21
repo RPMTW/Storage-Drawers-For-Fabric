@@ -1,6 +1,5 @@
 package ga.rpmtw.www.storagedrawersforfabric.plugin.hwyla;
 
-import mcp.mobius.waila.api.ICommonAccessor;
 import mcp.mobius.waila.api.IComponentProvider;
 import mcp.mobius.waila.api.IDataAccessor;
 import mcp.mobius.waila.api.IPluginConfig;
@@ -39,7 +38,7 @@ public class DrawerComponentProvider implements IComponentProvider
     {
         BlockEntityAbstractDrawer drawer = (BlockEntityAbstractDrawer) accessor.getBlockEntity();
 
-        RenderableTextComponent[] renderables = (ICommonAccessor[]) drawer.getItemHolders().stream()
+        RenderableTextComponent[] renderables = (RenderableTextComponent[]) drawer.getItemHolders().stream()
                 .map(holder -> getRenderable(holder.generateStack(holder.getAmount()))).toArray(RenderableTextComponent[]::new);
         tooltip.add(new RenderableTextComponent(renderables));
 

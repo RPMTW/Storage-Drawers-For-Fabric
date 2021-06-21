@@ -10,8 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 
-public class BlockDrawer extends BlockAbstractDrawer
-{
+public class BlockDrawer extends BlockAbstractDrawer {
 
     public BlockDrawer(Settings settings, Border border)
     {
