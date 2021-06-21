@@ -1,13 +1,13 @@
 package ga.rpmtw.www.storagedrawersforfabric.plugin.hwyla;
 
+import mcp.mobius.waila.api.ICommonAccessor;
 import mcp.mobius.waila.api.IComponentProvider;
 import mcp.mobius.waila.api.IDataAccessor;
 import mcp.mobius.waila.api.IPluginConfig;
-import mcp.mobius.waila.api.RenderableTextComponent;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.BlockAbstractDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity.BlockEntityAbstractDrawer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -39,7 +39,7 @@ public class DrawerComponentProvider implements IComponentProvider
     {
         BlockEntityAbstractDrawer drawer = (BlockEntityAbstractDrawer) accessor.getBlockEntity();
 
-        RenderableTextComponent[] renderables = (RenderableTextComponent[]) drawer.getItemHolders().stream()
+        RenderableTextComponent[] renderables = (ICommonAccessor[]) drawer.getItemHolders().stream()
                 .map(holder -> getRenderable(holder.generateStack(holder.getAmount()))).toArray(RenderableTextComponent[]::new);
         tooltip.add(new RenderableTextComponent(renderables));
 
@@ -49,7 +49,7 @@ public class DrawerComponentProvider implements IComponentProvider
     {
         if(!stack.isEmpty())
         {
-            CompoundTag tag = new CompoundTag();
+            NbtCompound tag = new NbtCompound();
             tag.putString("id", Registry.ITEM.getId(stack.getItem()).toString());
             tag.putInt("count", stack.getCount());
             if(stack.hasTag())
@@ -57,7 +57,7 @@ public class DrawerComponentProvider implements IComponentProvider
             return new RenderableTextComponent(new Identifier("item"), tag);
         } else
         {
-            CompoundTag spacerTag = new CompoundTag();
+            NbtCompound spacerTag = new NbtCompound();
             spacerTag.putInt("width", 18);
             return new RenderableTextComponent(new Identifier("spacer"), spacerTag);
         }

@@ -11,7 +11,7 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-//    maven { url "http://maven.tehnut.info" }
+    maven { url "https://bai.jfrog.io/artifactory/maven" }
     maven {
         url "https://maven.terraformersmc.com/releases/"
         content {
@@ -27,8 +27,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     //modCompile "me.sargunvohra.mcmods:autoconfig1u:3.3.1"
-//    modImplementation "mcp.mobius.waila:Hwyla:${project.hwyla_version}"
-
+    modImplementation "mcp.mobius.waila:wthit:fabric-3.6.0"
     modImplementation("com.terraformersmc:modmenu:2.0.2")
 
     // Fabric API. This is technically optional, but you probably want it anyway.
