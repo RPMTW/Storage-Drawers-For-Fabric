@@ -2,22 +2,24 @@ package ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity;
 
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.holder.CombinedInventoryHandler;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.holder.ItemHolder;
+import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityBasicDrawer;
+import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityHalfDrawer;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
-import net.minecraft.util.Tickable;
+import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public abstract class BlockEntityAbstractDrawer extends BlockEntity implements BlockEntityClientSerializable, Tickable {
+public abstract class BlockEntityAbstractDrawer extends BlockEntity implements BlockEntityClientSerializable {
 
-    public BlockEntityAbstractDrawer(BlockEntityType<?> type) {
-        super(type);
+    public BlockEntityAbstractDrawer(BlockEntityType type, BlockPos pos, BlockState state) {
+        super(type,pos,state);
     }
 
     public abstract ItemHolder getItemHolderAt(float x, float y);
@@ -42,22 +44,19 @@ public abstract class BlockEntityAbstractDrawer extends BlockEntity implements B
     }
 
     @Override
-    public void fromTag(BlockState state, NbtCompound tag)
-    {
+    public void readNbt(NbtCompound tag) {
         fromClientTag(tag);
-        super.fromTag(state, tag);
+        super.readNbt(tag);
     }
 
     @Override
-    public NbtCompound toTag(NbtCompound tag)
-    {
+    public NbtCompound writeNbt(NbtCompound tag) {
         toClientTag(tag);
-        return super.toTag(tag);
+        return super.writeNbt(tag);
     }
 
     @Override
-    public void fromClientTag(NbtCompound tag)
-    {
+    public void fromClientTag(NbtCompound tag) {
         List<ItemHolder> holders = new ArrayList<>();
         if(tag.contains("Holder"))
         {

@@ -9,11 +9,9 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class SDBlockEntities
-{
+public class SDBlockEntities {
 
-    private SDBlockEntities()
-    {
+    private SDBlockEntities() {
     }
 
     public static BlockEntityType<BlockEntityBasicDrawer> BASIC_DRAWER = null;
@@ -24,8 +22,7 @@ public class SDBlockEntities
 
     public static BlockEntityType<BlockEntityDrawerController> DRAWER_CONTROLLER = null;
 
-    public static void init()
-    {
+    public static void init() {
         BASIC_DRAWER = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(StorageDrawersMod.MOD_ID, "drawer"),
                 BlockEntityType.Builder.create(BlockEntityBasicDrawer::new, SDBlocks.OAK_DRAWER, SDBlocks.ACACIA_DRAWER,
                         SDBlocks.BIRCH_DRAWER, SDBlocks.JUNGLE_DRAWER, SDBlocks.SPRUCE_DRAWER, SDBlocks.DARK_OAK_DRAWER,

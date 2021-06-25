@@ -11,11 +11,10 @@ import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
+import org.jetbrains.annotations.Nullable;
 
-public class BlockDrawerController extends BlockWithEntity implements InventoryProvider
-{
+public class BlockDrawerController extends BlockWithEntity implements InventoryProvider {
 
     public static DirectionProperty FACING = HorizontalFacingBlock.FACING;
 
@@ -53,12 +52,11 @@ public class BlockDrawerController extends BlockWithEntity implements InventoryP
         return BlockRenderType.MODEL;
     }
 
+    @Nullable
     @Override
-    public BlockEntity createBlockEntity(BlockView view)
-    {
-        return new BlockEntityDrawerController();
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new BlockEntityDrawerController(pos, state);
     }
-
     @Override
     public SidedInventory getInventory(BlockState state, WorldAccess world, BlockPos pos)
     {

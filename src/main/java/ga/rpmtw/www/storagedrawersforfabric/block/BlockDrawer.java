@@ -5,10 +5,11 @@ import ga.rpmtw.www.storagedrawersforfabric.api.drawer.BlockAbstractDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.DrawerType;
 import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityBasicDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.init.SDContainers;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.BlockView;
 
 public class BlockDrawer extends BlockAbstractDrawer {
 
@@ -20,14 +21,12 @@ public class BlockDrawer extends BlockAbstractDrawer {
     }
 
     @Override
-    public BlockEntity createBlockEntity(BlockView arg0)
-    {
-        return new BlockEntityBasicDrawer();
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new BlockEntityBasicDrawer(pos, state);
     }
 
     @Override
-    public Identifier getContainerIdentifier()
-    {
+    public Identifier getContainerIdentifier() {
         return SDContainers.BASIC_DRAWER_CONTAINER;
     }
 

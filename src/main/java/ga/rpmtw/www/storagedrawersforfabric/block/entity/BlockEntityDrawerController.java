@@ -6,8 +6,8 @@ import ga.rpmtw.www.storagedrawersforfabric.api.drawer.BlockAbstractDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity.BlockEntityAbstractDrawer;
 import ga.rpmtw.www.storagedrawersforfabric.block.BlockDrawerController;
 import ga.rpmtw.www.storagedrawersforfabric.init.SDBlockEntities;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.util.Tickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
@@ -15,16 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BlockEntityDrawerController extends BlockEntity implements Tickable
+public class BlockEntityDrawerController extends BlockEntity
 {
 
     List<BlockPos> drawerPositions = new ArrayList<>();
 
     CombinedInventoryHandler handler = new CombinedInventoryHandler(this::getAffectedItemHolders);
 
-    public BlockEntityDrawerController()
-    {
-        super(SDBlockEntities.DRAWER_CONTROLLER);
+    public BlockEntityDrawerController(BlockPos pos, BlockState state) {
+        super(SDBlockEntities.DRAWER_CONTROLLER, pos, state);
     }
 
     public void updateDrawerPositions()
@@ -65,10 +64,7 @@ public class BlockEntityDrawerController extends BlockEntity implements Tickable
         return handler;
     }
 
-    @Override
-    public void tick()
-    {
+    public void tick() {
         updateDrawerPositions();
     }
-
 }

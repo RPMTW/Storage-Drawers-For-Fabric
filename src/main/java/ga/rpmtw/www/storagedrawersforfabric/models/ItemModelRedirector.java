@@ -14,34 +14,28 @@ import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.json.ModelTransformation.Mode;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class ItemModelRedirector implements RedirectModelCallback
-{
+public class ItemModelRedirector implements RedirectModelCallback {
 
     @Override
-    public BakedModel onRender(ItemStack stack, Mode renderMode, boolean leftHanded, BakedModel model)
-    {
-        if(stack.getItem() instanceof BlockItem)
-        {
+    public BakedModel onRender(ItemStack stack, Mode renderMode, boolean leftHanded, BakedModel model) {
+        if (stack.getItem() instanceof BlockItem) {
             Block block = ((BlockItem) stack.getItem()).getBlock();
-            if(block instanceof BlockAbstractDrawer)
-            {
+            if (block instanceof BlockAbstractDrawer) {
                 DeserializedInfo info = BlockAbstractDrawer.deserializeInfo(stack);
                 Border b = info.getBorder();
-                if(b == null)
+                if (b == null)
                     b = block.getDefaultState().get(BorderRegistry.BORDER_TYPE);
 
                 return ModelUtils.getBakedDrawerModel(block.getDefaultState().with(BorderRegistry.BORDER_TYPE, b));
             }
         }
-        if(stack.getItem() instanceof ItemPackagedDrawer)
-        {
-            CompoundTag tag = stack.getSubTag("DrawerInfo");
-            if(tag != null)
-            {
+        if (stack.getItem() instanceof ItemPackagedDrawer) {
+            NbtCompound tag = stack.getSubTag("DrawerInfo");
+            if (tag != null) {
                 BlockAbstractDrawer drawer = (BlockAbstractDrawer) Registry.BLOCK.get(new Identifier(tag.getString("Id")));
 
 

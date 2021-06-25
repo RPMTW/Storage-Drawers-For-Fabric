@@ -6,23 +6,22 @@ import ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity.BlockEntityAb
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.holder.AreaHelper;
 import ga.rpmtw.www.storagedrawersforfabric.init.SDBlockEntities;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
-import net.minecraft.util.Tickable;
+import net.minecraft.block.BlockState;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec2f;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockEntityHalfDrawer extends BlockEntityAbstractDrawer implements BlockEntityClientSerializable, Tickable
-{
+public class BlockEntityHalfDrawer extends BlockEntityAbstractDrawer implements BlockEntityClientSerializable{
 
     List<ItemHolder> holderList = new ArrayList<>();
     AreaHelper helper;
 
     private CombinedInventoryHandler handler;
 
-    public BlockEntityHalfDrawer()
-    {
-        super(SDBlockEntities.HALF_DRAWER);
+    public BlockEntityHalfDrawer(BlockPos pos, BlockState state) {
+        super(SDBlockEntities.HALF_DRAWER,pos,state);
         holderList.add(new ItemHolder(16, this));
         holderList.add(new ItemHolder(16, this));
         helper = new AreaHelper(() -> holderList, new AreaHelper.Area(new Vec2f(0, 0), new Vec2f(1F, 0.5F)), new AreaHelper.Area(new Vec2f(0, 0.5F), new Vec2f(1F, 1F)));
@@ -31,28 +30,24 @@ public class BlockEntityHalfDrawer extends BlockEntityAbstractDrawer implements 
     }
 
     @Override
-    public ItemHolder getItemHolderAt(float x, float y)
-    {
+    public ItemHolder getItemHolderAt(float x, float y) {
         return helper.get(new Vec2f(x, y));
     }
 
     @Override
-    public List<ItemHolder> getItemHolders()
-    {
+    public List<ItemHolder> getItemHolders() {
         return holderList;
     }
 
     @Override
-    public void setItemHolders(List<ItemHolder> holders)
-    {
+    public void setItemHolders(List<ItemHolder> holders) {
         this.holderList.clear();
         this.holderList.addAll(holders);
         handler.generateSlotList();
     }
 
     @Override
-    public CombinedInventoryHandler getInventoryHandler()
-    {
+    public CombinedInventoryHandler getInventoryHandler() {
         return handler;
     }
 

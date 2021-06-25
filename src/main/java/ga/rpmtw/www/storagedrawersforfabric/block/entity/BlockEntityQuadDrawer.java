@@ -6,23 +6,22 @@ import ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity.BlockEntityAb
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.holder.AreaHelper;
 import ga.rpmtw.www.storagedrawersforfabric.init.SDBlockEntities;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
-import net.minecraft.util.Tickable;
+import net.minecraft.block.BlockState;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec2f;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockEntityQuadDrawer extends BlockEntityAbstractDrawer implements BlockEntityClientSerializable, Tickable
-{
+public class BlockEntityQuadDrawer extends BlockEntityAbstractDrawer implements BlockEntityClientSerializable {
 
     List<ItemHolder> holderList = new ArrayList<>();
     AreaHelper helper;
 
     private CombinedInventoryHandler handler;
 
-    public BlockEntityQuadDrawer()
-    {
-        super(SDBlockEntities.QUAD_DRAWER);
+    public BlockEntityQuadDrawer(BlockPos pos, BlockState state) {
+        super(SDBlockEntities.QUAD_DRAWER, pos, state);
         holderList.add(new ItemHolder(8, this));
         holderList.add(new ItemHolder(8, this));
         holderList.add(new ItemHolder(8, this));
@@ -37,28 +36,24 @@ public class BlockEntityQuadDrawer extends BlockEntityAbstractDrawer implements 
     }
 
     @Override
-    public ItemHolder getItemHolderAt(float x, float y)
-    {
+    public ItemHolder getItemHolderAt(float x, float y) {
         return helper.get(new Vec2f(x, y));
     }
 
     @Override
-    public List<ItemHolder> getItemHolders()
-    {
+    public List<ItemHolder> getItemHolders() {
         return holderList;
     }
 
     @Override
-    public void setItemHolders(List<ItemHolder> holders)
-    {
+    public void setItemHolders(List<ItemHolder> holders) {
         this.holderList.clear();
         this.holderList.addAll(holders);
         handler.generateSlotList();
     }
 
     @Override
-    public CombinedInventoryHandler getInventoryHandler()
-    {
+    public CombinedInventoryHandler getInventoryHandler() {
         return handler;
     }
 
