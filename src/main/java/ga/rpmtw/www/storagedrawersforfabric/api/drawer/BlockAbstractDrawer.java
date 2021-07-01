@@ -1,14 +1,12 @@
 package ga.rpmtw.www.storagedrawersforfabric.api.drawer;
 
-import java.util.UUID;
-
 import ga.rpmtw.www.storagedrawersforfabric.api.border.Border;
 import ga.rpmtw.www.storagedrawersforfabric.api.border.BorderRegistry;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity.BlockEntityAbstractDrawer;
-import ga.rpmtw.www.storagedrawersforfabric.utils.BlockUtils;
-import ga.rpmtw.www.storagedrawersforfabric.utils.model.BorderModelProvider;
 import ga.rpmtw.www.storagedrawersforfabric.item.DrawerInteractable;
+import ga.rpmtw.www.storagedrawersforfabric.utils.BlockUtils;
 import ga.rpmtw.www.storagedrawersforfabric.utils.ITapeable;
+import ga.rpmtw.www.storagedrawersforfabric.utils.model.BorderModelProvider;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.*;
 import net.minecraft.entity.ItemEntity;
@@ -30,6 +28,8 @@ import net.minecraft.util.math.Vec2f;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+
+import java.util.UUID;
 
 public abstract class BlockAbstractDrawer extends BlockWithEntity implements InventoryProvider, BorderModelProvider, ITapeable<BlockEntityAbstractDrawer> {
 

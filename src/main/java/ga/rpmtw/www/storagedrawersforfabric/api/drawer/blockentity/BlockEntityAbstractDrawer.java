@@ -2,8 +2,6 @@ package ga.rpmtw.www.storagedrawersforfabric.api.drawer.blockentity;
 
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.holder.CombinedInventoryHandler;
 import ga.rpmtw.www.storagedrawersforfabric.api.drawer.holder.ItemHolder;
-import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityBasicDrawer;
-import ga.rpmtw.www.storagedrawersforfabric.block.entity.BlockEntityHalfDrawer;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
