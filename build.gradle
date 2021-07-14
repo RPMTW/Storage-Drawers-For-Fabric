@@ -14,10 +14,7 @@ repositories {
     maven { url "http://maven.tehnut.info" }
     maven { url "https://maven.shedaniel.me/" }
     maven {
-        url "https://bai.jfrog.io/artifactory/maven" //ModMenu
-        content {
-            includeGroup "com.terraformersmc"
-        }
+        url "https://bai.jfrog.io/artifactory/maven" //ModMenu Wthit
     }
 }
 
@@ -28,8 +25,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modCompile "me.sargunvohra.mcmods:autoconfig1u:2.0.1"
-    modImplementation "mcp.mobius.waila:Hwyla:${project.hwyla_version}"
-
+    modImplementation "mcp.mobius.waila:wthit:fabric-2.10.5"
     modImplementation("com.terraformersmc:modmenu:1.16.9")
 
 

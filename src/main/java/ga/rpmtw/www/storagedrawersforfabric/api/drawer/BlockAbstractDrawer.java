@@ -25,7 +25,6 @@ import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec2f;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -50,7 +49,7 @@ public abstract class BlockAbstractDrawer extends BlockWithEntity implements Inv
 
     public BlockState rotate(BlockState state, BlockRotation rotation)
     {
-        return (BlockState) state.with(FACING, rotation.rotate((Direction) state.get(FACING)));
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
     
     
@@ -193,12 +192,12 @@ public abstract class BlockAbstractDrawer extends BlockWithEntity implements Inv
 
     public BlockState mirror(BlockState state, BlockMirror mirror)
     {
-        return state.rotate(mirror.getRotation((Direction) state.get(FACING)));
+        return state.rotate(mirror.getRotation(state.get(FACING)));
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx)
     {
-        return (BlockState) this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+        return this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
     }
 
     @Override
