@@ -5,7 +5,8 @@
   "name": "Storage Drawers For Fabric",
   "description": "",
   "authors": [
-    "benfah"
+    "benfah",
+    "SiongSng"
   ],
   "license": "MIT",
   "environment": "*",
@@ -23,7 +24,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.16.5"
   },
   "custom": {
     "waila:plugins": {

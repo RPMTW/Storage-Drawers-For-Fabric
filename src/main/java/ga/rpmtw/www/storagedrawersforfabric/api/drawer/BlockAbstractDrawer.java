@@ -18,7 +18,7 @@ import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.state.StateManager.Builder;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -237,7 +237,7 @@ public abstract class BlockAbstractDrawer extends BlockWithEntity implements Inv
     {
         if(stack.getSubTag("DrawerInfo") != null)
         {
-            CompoundTag data = stack.getSubTag("DrawerInfo");
+            NbtCompound data = stack.getSubTag("DrawerInfo");
             
             
             String border = data.getString("Border");
@@ -255,7 +255,7 @@ public abstract class BlockAbstractDrawer extends BlockWithEntity implements Inv
     public static ItemStack getStack(BlockAbstractDrawer drawer, Border border)
     {
         ItemStack result = new ItemStack(drawer.asItem());
-        CompoundTag data = new CompoundTag();
+        NbtCompound data = new NbtCompound();
 
         data.putString("Border", BorderRegistry.getName(border));
 

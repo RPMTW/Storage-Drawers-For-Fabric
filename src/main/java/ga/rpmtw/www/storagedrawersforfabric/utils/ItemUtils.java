@@ -2,14 +2,14 @@ package ga.rpmtw.www.storagedrawersforfabric.utils;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ItemUtils
 {
 
-    public static CompoundTag toTag(CompoundTag tag, ItemStack stack)
+    public static NbtCompound toTag(NbtCompound tag, ItemStack stack)
     {
         Identifier identifier = Registry.ITEM.getId(stack.getItem());
         tag.putString("id", identifier.toString());
@@ -22,7 +22,7 @@ public class ItemUtils
         return tag;
     }
 
-    public static ItemStack fromTag(CompoundTag tag)
+    public static ItemStack fromTag(NbtCompound tag)
     {
         Item i = Registry.ITEM.get(new Identifier(tag.getString("id")));
         ItemStack result = new ItemStack(i);
